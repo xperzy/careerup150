@@ -7,5 +7,4 @@ Written in C++
 
 Yu Zhu
 
-More details see:  http://yucoding.blogspot.com/
 
