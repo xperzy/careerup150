@@ -1,0 +1,20 @@
+//Cracking the Coding Interview 5th edition
+
+// 
+// 3.1 Describe how you could use a single array to implement three stacks
+//   
+
+
+Answer:
+
+Here just put the easy idea of this problem:
+
+   Fixed size n:
+   
+   For stack 1: use [0, n/3)
+   For stack 2: use [n/3, 2n/3)
+   For stack 3: use [2n/3, n).
+   
+   
+Complex Answer see the book chapter:  page 205.
+
