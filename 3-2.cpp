@@ -28,7 +28,33 @@ public:
 
 
 
+//Inheritance of stack class
+// Note that:
+// (1) class StackWithMin2: public stack<pair<S,S> >{};
+// (2) when using stack member functions, must contain the
+//       template. e.g. stack<pair<S,S> >::push(make_pair(s,m));
 
+template <class S>
+class StackWithMin2: public stack<pair<S,S> >{
+public:
+  void push(S s){
+    if (!empty()) {
+      S m = std::min(s,min());
+      stack<pair<S,S> >::push(make_pair(s,m));
+    }else{
+      stack<pair<S,S> >::push(make_pair(s,s));
+    }
+  }
+  S min(){
+	 return  stack<pair<S,S> >::top().second;
+   }
+   
+  S top(){return stack<pair<S,S> >::top().first;}
+  
+  void pop(){ stack<pair<S,S> >::pop();}
+  
+  bool empty() { return stack<pair<S,S> >::empty();}
+};
 
 int main(){
   //StackWithMin<int> st;
