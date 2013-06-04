@@ -67,7 +67,8 @@ public:
          return dequeueDog();
        }
        if (!cats.empty() && !dogs.empty()){
-         if (cats.front().getOrder()>dogs.front().getOrder()){
+         //if (cats.front().getOrder()>dogs.front().getOrder()){
+	if (cats.front()>dogs.front()){
             return dequeueDog();
          }else{
             return dequeueCat();
