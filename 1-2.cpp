@@ -1,24 +1,18 @@
 #include <iostream>
-
+#include <string.h>
 using namespace std;
 
-void reverse(char* str){
-    char* ed = str;
-    char* st = str;
-    while (*ed)  { ed++; }
-    ed--;
-    while (st<ed) {
-    char tmp = *st;
-    *st = *ed;
-    *ed = tmp;
-    st++;
-    ed--;
-    }
-    cout << str<< endl;
+void reverse(char Str[]){
+  for(int i=strlen(Str);i>=0;i--)
+  {
+	  cout<<Str[i];
+  }
 }
 
 int main(){
-  char str[]="abcdefghjka"; //If use char* = "adadaf", the memory is read-only, which will cause error
+  char str[30];
+  cout<<"input character\t:";
+  cin.getline(str,sizeof(str));
   cout << str << " -> ";
   reverse(str);
   return 0;
